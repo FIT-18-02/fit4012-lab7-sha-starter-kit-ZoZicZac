@@ -1,0 +1,49 @@
+=== Lab 7 Practice Log Wed May 20 21:54:45 SEAST 2026 ===
+
+1. SHA-256 self-test:
+[PASS] input=""
+expected: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+actual  : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+[PASS] input="abc"
+expected: ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+actual  : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+
+[PASS] input="hello FIT4012 SHA"
+expected: e942ae0ecb44fe48e1490144162fc64e9c3c6c399bb4e2d686532195cdc3eae6
+actual  : e942ae0ecb44fe48e1490144162fc64e9c3c6c399bb4e2d686532195cdc3eae6
+
+
+2. Hash of 'abc':
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+
+3. Hash of 'FIT4012':
+04980625134a14f1db10c9bb1d80fe75d7baf070d41476db9df568012b30a12d
+
+2707f292d79553c8f1bf07af888c146a42a66850dff66d7cf793ecb577ddaaa8
+
+=== File Integrity Test ===
+After tampering (should FAIL):
+[FAIL] File was changed or expected hash is incorrect
+expected: 0de77ca6b0acc905412bfcde0f16f42bffb943e6f94baf0aba2ced1bf82c579a
+actual  : 383787291e926f0e6925e808ca58b995bc660ff338151591df4ed59a3c1e9c69
+
+=== Password Hash Test ===
+Register password: 123456
+[PASS] Password hash saved to password.hash
+Verify correct:
+Usage:
+  D:\ATBMTT\fit4012-lab7-sha-starter-kit-ZoZicZac\password_hash.exe register <password> [password_file]
+  D:\ATBMTT\fit4012-lab7-sha-starter-kit-ZoZicZac\password_hash.exe login <password> [password_file]
+Verify wrong:
+Usage:
+  D:\ATBMTT\fit4012-lab7-sha-starter-kit-ZoZicZac\password_hash.exe register <password> [password_file]
+  D:\ATBMTT\fit4012-lab7-sha-starter-kit-ZoZicZac\password_hash.exe login <password> [password_file]
+
+=== Salted Password Hash Test ===
+First registration:
+[PASS] Salted password hash saved to salted1.hash
+ba212079109f32c8702fe82af9b6d60e:16a03eb47281142344dd4914e9f2993c01447f71461bb6238a0e809a2501e932
+Second registration (same password):
+[PASS] Salted password hash saved to salted2.hash
+948caa55091625d056ea3913f49b7ce2:6ffd7d32da969a2c581fd9dbdba728b8f9fd6509ed31aacc728e6e4d42dd06b8
